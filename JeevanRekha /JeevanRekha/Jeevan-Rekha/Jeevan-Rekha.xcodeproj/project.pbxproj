@@ -1,0 +1,931 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F61855A275F675A00E6D650 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F618559275F675A00E6D650 /* GoogleService-Info.plist */; };
+		7F61855C275FA2B700E6D650 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F61855B275FA2B700E6D650 /* SettingsViewController.swift */; };
+		7F61855E275FA7BB00E6D650 /* CoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F61855D275FA7BB00E6D650 /* CoverCell.swift */; };
+		7F618560275FA7D900E6D650 /* settingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F61855F275FA7D900E6D650 /* settingsCell.swift */; };
+		7F6389A52752C39F00D48F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389A42752C39F00D48F69 /* AppDelegate.swift */; };
+		7F6389A72752C39F00D48F69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389A62752C39F00D48F69 /* SceneDelegate.swift */; };
+		7F6389AC2752C39F00D48F69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F6389AA2752C39F00D48F69 /* Main.storyboard */; };
+		7F6389AF2752C39F00D48F69 /* Jeevan_Rekha.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389AD2752C39F00D48F69 /* Jeevan_Rekha.xcdatamodeld */; };
+		7F6389B12752C3A200D48F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6389B02752C3A200D48F69 /* Assets.xcassets */; };
+		7F6389B42752C3A200D48F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F6389B22752C3A200D48F69 /* LaunchScreen.storyboard */; };
+		7F6389BF2752C3A200D48F69 /* Jeevan_RekhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389BE2752C3A200D48F69 /* Jeevan_RekhaTests.swift */; };
+		7F6389C92752C3A200D48F69 /* Jeevan_RekhaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389C82752C3A200D48F69 /* Jeevan_RekhaUITests.swift */; };
+		7F6389CB2752C3A200D48F69 /* Jeevan_RekhaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389CA2752C3A200D48F69 /* Jeevan_RekhaUITestsLaunchTests.swift */; };
+		7F6389DE2752C4DF00D48F69 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389DD2752C4DF00D48F69 /* Model.swift */; };
+		7F6389EB2752C4ED00D48F69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389E02752C4ED00D48F69 /* ViewController.swift */; };
+		7F6389EC2752C4ED00D48F69 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389E12752C4ED00D48F69 /* PatientViewController.swift */; };
+		7F6389ED2752C4ED00D48F69 /* PatientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389E22752C4ED00D48F69 /* PatientDetailViewController.swift */; };
+		7F6389EE2752C4ED00D48F69 /* UserTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389E32752C4ED00D48F69 /* UserTypeViewController.swift */; };
+		7F6389EF2752C4ED00D48F69 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389E42752C4ED00D48F69 /* OnBoardingViewController.swift */; };
+		7F6389F02752C4ED00D48F69 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389E52752C4ED00D48F69 /* LogInViewController.swift */; };
+		7F6389F22752C4ED00D48F69 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389E82752C4ED00D48F69 /* PatientTableViewCell.swift */; };
+		7F6389F32752C4ED00D48F69 /* UserTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389E92752C4ED00D48F69 /* UserTypeTableViewCell.swift */; };
+		7F6389F42752C4ED00D48F69 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389EA2752C4ED00D48F69 /* SignInViewController.swift */; };
+		7F6389F72752C54800D48F69 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389F52752C54700D48F69 /* Switcher.swift */; };
+		7F6389F82752C54800D48F69 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6389F62752C54800D48F69 /* Constants.swift */; };
+		7F638A0D2752C55000D48F69 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F6389FA2752C55000D48F69 /* Poppins-ExtraLight.ttf */; };
+		7F638A0E2752C55000D48F69 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F6389FB2752C55000D48F69 /* Poppins-ThinItalic.ttf */; };
+		7F638A0F2752C55000D48F69 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F6389FC2752C55000D48F69 /* Poppins-ExtraLightItalic.ttf */; };
+		7F638A102752C55000D48F69 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F6389FD2752C55000D48F69 /* Poppins-BoldItalic.ttf */; };
+		7F638A112752C55000D48F69 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F6389FE2752C55000D48F69 /* Poppins-Light.ttf */; };
+		7F638A122752C55000D48F69 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F6389FF2752C55000D48F69 /* Poppins-Medium.ttf */; };
+		7F638A132752C55000D48F69 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F638A002752C55000D48F69 /* Poppins-SemiBoldItalic.ttf */; };
+		7F638A142752C55000D48F69 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F638A012752C55000D48F69 /* Poppins-ExtraBoldItalic.ttf */; };
+		7F638A152752C55000D48F69 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F638A022752C55000D48F69 /* Poppins-ExtraBold.ttf */; };
+		7F638A162752C55000D48F69 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F638A032752C55000D48F69 /* Poppins-BlackItalic.ttf */; };
+		7F638A172752C55000D48F69 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7F638A042752C55000D48F69 /* OFL.txt */; };
+		7F638A182752C55000D48F69 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F638A052752C55000D48F69 /* Poppins-Regular.ttf */; };
+		7F638A192752C55000D48F69 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F638A062752C55000D48F69 /* Poppins-LightItalic.ttf */; };
+		7F638A1A2752C55000D48F69 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F638A072752C55000D48F69 /* Poppins-Bold.ttf */; };
+		7F638A1B2752C55000D48F69 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F638A082752C55000D48F69 /* Poppins-Black.ttf */; };
+		7F638A1C2752C55000D48F69 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F638A092752C55000D48F69 /* Poppins-Thin.ttf */; };
+		7F638A1D2752C55000D48F69 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F638A0A2752C55000D48F69 /* Poppins-SemiBold.ttf */; };
+		7F638A1E2752C55000D48F69 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F638A0B2752C55000D48F69 /* Poppins-Italic.ttf */; };
+		7F638A1F2752C55000D48F69 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F638A0C2752C55000D48F69 /* Poppins-MediumItalic.ttf */; };
+		7F638A222752C55D00D48F69 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F638A212752C55D00D48F69 /* Extension.swift */; };
+		7F774DCE2758E45C00999386 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7F774DCD2758E45C00999386 /* FirebaseAnalytics */; };
+		7F774DD02758E45C00999386 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 7F774DCF2758E45C00999386 /* FirebaseAnalyticsSwift-Beta */; };
+		7F774DD22758E45C00999386 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7F774DD12758E45C00999386 /* FirebaseAuth */; };
+		7F774DD42758E45C00999386 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 7F774DD32758E45C00999386 /* FirebaseDatabase */; };
+		7F774DD62758E45C00999386 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7F774DD52758E45C00999386 /* FirebaseFirestore */; };
+		7F774DD82758E45C00999386 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 7F774DD72758E45C00999386 /* FirebaseInAppMessaging-Beta */; };
+		7F774DDA2758E45C00999386 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 7F774DD92758E45C00999386 /* FirebaseMessaging */; };
+		7F96A5AD275BC18700BC64F8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96A5AC275BC18700BC64F8 /* ProfileViewController.swift */; };
+		7F96A5AF275BDA3C00BC64F8 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96A5AE275BDA3C00BC64F8 /* ProfileTableViewCell.swift */; };
+		7F96A5B1275BDABE00BC64F8 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96A5B0275BDABE00BC64F8 /* DetailTableViewCell.swift */; };
+		7F96A5B3275BDACB00BC64F8 /* DripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96A5B2275BDACB00BC64F8 /* DripTableViewCell.swift */; };
+		7F96A5B5275BDAD600BC64F8 /* TempTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96A5B4275BDAD600BC64F8 /* TempTableViewCell.swift */; };
+		7F96A5B7275BDB0100BC64F8 /* PRTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96A5B6275BDB0100BC64F8 /* PRTableViewCell.swift */; };
+		7F96A5B9275BDB0C00BC64F8 /* ECGTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96A5B8275BDB0C00BC64F8 /* ECGTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F6389BB2752C3A200D48F69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F6389992752C39F00D48F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F6389A02752C39F00D48F69;
+			remoteInfo = "Jeevan-Rekha";
+		};
+		7F6389C52752C3A200D48F69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F6389992752C39F00D48F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F6389A02752C39F00D48F69;
+			remoteInfo = "Jeevan-Rekha";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7F618559275F675A00E6D650 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7F61855B275FA2B700E6D650 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7F61855D275FA7BB00E6D650 /* CoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverCell.swift; sourceTree = "<group>"; };
+		7F61855F275FA7D900E6D650 /* settingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsCell.swift; sourceTree = "<group>"; };
+		7F6389A12752C39F00D48F69 /* Jeevan-Rekha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jeevan-Rekha.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F6389A42752C39F00D48F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F6389A62752C39F00D48F69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7F6389AB2752C39F00D48F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7F6389AE2752C39F00D48F69 /* Jeevan_Rekha.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jeevan_Rekha.xcdatamodel; sourceTree = "<group>"; };
+		7F6389B02752C3A200D48F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F6389B32752C3A200D48F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7F6389B52752C3A200D48F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F6389BA2752C3A200D48F69 /* Jeevan-RekhaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jeevan-RekhaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F6389BE2752C3A200D48F69 /* Jeevan_RekhaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeevan_RekhaTests.swift; sourceTree = "<group>"; };
+		7F6389C42752C3A200D48F69 /* Jeevan-RekhaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Jeevan-RekhaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F6389C82752C3A200D48F69 /* Jeevan_RekhaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeevan_RekhaUITests.swift; sourceTree = "<group>"; };
+		7F6389CA2752C3A200D48F69 /* Jeevan_RekhaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jeevan_RekhaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7F6389DD2752C4DF00D48F69 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7F6389E02752C4ED00D48F69 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F6389E12752C4ED00D48F69 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		7F6389E22752C4ED00D48F69 /* PatientDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDetailViewController.swift; sourceTree = "<group>"; };
+		7F6389E32752C4ED00D48F69 /* UserTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTypeViewController.swift; sourceTree = "<group>"; };
+		7F6389E42752C4ED00D48F69 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		7F6389E52752C4ED00D48F69 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		7F6389E82752C4ED00D48F69 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
+		7F6389E92752C4ED00D48F69 /* UserTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTypeTableViewCell.swift; sourceTree = "<group>"; };
+		7F6389EA2752C4ED00D48F69 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		7F6389F52752C54700D48F69 /* Switcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
+		7F6389F62752C54800D48F69 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7F6389FA2752C55000D48F69 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		7F6389FB2752C55000D48F69 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		7F6389FC2752C55000D48F69 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		7F6389FD2752C55000D48F69 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		7F6389FE2752C55000D48F69 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		7F6389FF2752C55000D48F69 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		7F638A002752C55000D48F69 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		7F638A012752C55000D48F69 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		7F638A022752C55000D48F69 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		7F638A032752C55000D48F69 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		7F638A042752C55000D48F69 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		7F638A052752C55000D48F69 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		7F638A062752C55000D48F69 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		7F638A072752C55000D48F69 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		7F638A082752C55000D48F69 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		7F638A092752C55000D48F69 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		7F638A0A2752C55000D48F69 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		7F638A0B2752C55000D48F69 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		7F638A0C2752C55000D48F69 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		7F638A212752C55D00D48F69 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		7F96A5AC275BC18700BC64F8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7F96A5AE275BDA3C00BC64F8 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		7F96A5B0275BDABE00BC64F8 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		7F96A5B2275BDACB00BC64F8 /* DripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripTableViewCell.swift; sourceTree = "<group>"; };
+		7F96A5B4275BDAD600BC64F8 /* TempTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempTableViewCell.swift; sourceTree = "<group>"; };
+		7F96A5B6275BDB0100BC64F8 /* PRTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRTableViewCell.swift; sourceTree = "<group>"; };
+		7F96A5B8275BDB0C00BC64F8 /* ECGTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F63899E2752C39F00D48F69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F774DD02758E45C00999386 /* FirebaseAnalyticsSwift-Beta in Frameworks */,
+				7F774DD22758E45C00999386 /* FirebaseAuth in Frameworks */,
+				7F774DDA2758E45C00999386 /* FirebaseMessaging in Frameworks */,
+				7F774DD42758E45C00999386 /* FirebaseDatabase in Frameworks */,
+				7F774DD62758E45C00999386 /* FirebaseFirestore in Frameworks */,
+				7F774DCE2758E45C00999386 /* FirebaseAnalytics in Frameworks */,
+				7F774DD82758E45C00999386 /* FirebaseInAppMessaging-Beta in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F6389B72752C3A200D48F69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F6389C12752C3A200D48F69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F6389982752C39F00D48F69 = {
+			isa = PBXGroup;
+			children = (
+				7F6389A32752C39F00D48F69 /* Jeevan-Rekha */,
+				7F6389BD2752C3A200D48F69 /* Jeevan-RekhaTests */,
+				7F6389C72752C3A200D48F69 /* Jeevan-RekhaUITests */,
+				7F6389A22752C39F00D48F69 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F6389A22752C39F00D48F69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F6389A12752C39F00D48F69 /* Jeevan-Rekha.app */,
+				7F6389BA2752C3A200D48F69 /* Jeevan-RekhaTests.xctest */,
+				7F6389C42752C3A200D48F69 /* Jeevan-RekhaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F6389A32752C39F00D48F69 /* Jeevan-Rekha */ = {
+			isa = PBXGroup;
+			children = (
+				7F6389DC2752C4DF00D48F69 /* Model */,
+				7F6389DF2752C4ED00D48F69 /* Controller */,
+				7F6389D72752C47200D48F69 /* Utilities */,
+				7F6389D82752C48C00D48F69 /* View */,
+				7F6389B52752C3A200D48F69 /* Info.plist */,
+				7F6389AD2752C39F00D48F69 /* Jeevan_Rekha.xcdatamodeld */,
+				7F618559275F675A00E6D650 /* GoogleService-Info.plist */,
+			);
+			path = "Jeevan-Rekha";
+			sourceTree = "<group>";
+		};
+		7F6389BD2752C3A200D48F69 /* Jeevan-RekhaTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F6389BE2752C3A200D48F69 /* Jeevan_RekhaTests.swift */,
+			);
+			path = "Jeevan-RekhaTests";
+			sourceTree = "<group>";
+		};
+		7F6389C72752C3A200D48F69 /* Jeevan-RekhaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7F6389C82752C3A200D48F69 /* Jeevan_RekhaUITests.swift */,
+				7F6389CA2752C3A200D48F69 /* Jeevan_RekhaUITestsLaunchTests.swift */,
+			);
+			path = "Jeevan-RekhaUITests";
+			sourceTree = "<group>";
+		};
+		7F6389D72752C47200D48F69 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7F6389F92752C55000D48F69 /* Fonts */,
+				7F638A212752C55D00D48F69 /* Extension.swift */,
+				7F6389A42752C39F00D48F69 /* AppDelegate.swift */,
+				7F6389F62752C54800D48F69 /* Constants.swift */,
+				7F6389F52752C54700D48F69 /* Switcher.swift */,
+				7F6389A62752C39F00D48F69 /* SceneDelegate.swift */,
+				7F6389B02752C3A200D48F69 /* Assets.xcassets */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7F6389D82752C48C00D48F69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F6389AA2752C39F00D48F69 /* Main.storyboard */,
+				7F6389B22752C3A200D48F69 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7F6389DC2752C4DF00D48F69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F6389DD2752C4DF00D48F69 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F6389DF2752C4ED00D48F69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7F6389E72752C4ED00D48F69 /* TableViewCell */,
+				7F6389E02752C4ED00D48F69 /* ViewController.swift */,
+				7F6389E12752C4ED00D48F69 /* PatientViewController.swift */,
+				7F6389E22752C4ED00D48F69 /* PatientDetailViewController.swift */,
+				7F6389E32752C4ED00D48F69 /* UserTypeViewController.swift */,
+				7F6389E42752C4ED00D48F69 /* OnBoardingViewController.swift */,
+				7F6389E52752C4ED00D48F69 /* LogInViewController.swift */,
+				7F6389EA2752C4ED00D48F69 /* SignInViewController.swift */,
+				7F96A5AC275BC18700BC64F8 /* ProfileViewController.swift */,
+				7F61855B275FA2B700E6D650 /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7F6389E72752C4ED00D48F69 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F6389E82752C4ED00D48F69 /* PatientTableViewCell.swift */,
+				7F6389E92752C4ED00D48F69 /* UserTypeTableViewCell.swift */,
+				7F96A5AE275BDA3C00BC64F8 /* ProfileTableViewCell.swift */,
+				7F96A5B0275BDABE00BC64F8 /* DetailTableViewCell.swift */,
+				7F96A5B2275BDACB00BC64F8 /* DripTableViewCell.swift */,
+				7F96A5B4275BDAD600BC64F8 /* TempTableViewCell.swift */,
+				7F96A5B6275BDB0100BC64F8 /* PRTableViewCell.swift */,
+				7F96A5B8275BDB0C00BC64F8 /* ECGTableViewCell.swift */,
+				7F61855D275FA7BB00E6D650 /* CoverCell.swift */,
+				7F61855F275FA7D900E6D650 /* settingsCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		7F6389F92752C55000D48F69 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7F6389FA2752C55000D48F69 /* Poppins-ExtraLight.ttf */,
+				7F6389FB2752C55000D48F69 /* Poppins-ThinItalic.ttf */,
+				7F6389FC2752C55000D48F69 /* Poppins-ExtraLightItalic.ttf */,
+				7F6389FD2752C55000D48F69 /* Poppins-BoldItalic.ttf */,
+				7F6389FE2752C55000D48F69 /* Poppins-Light.ttf */,
+				7F6389FF2752C55000D48F69 /* Poppins-Medium.ttf */,
+				7F638A002752C55000D48F69 /* Poppins-SemiBoldItalic.ttf */,
+				7F638A012752C55000D48F69 /* Poppins-ExtraBoldItalic.ttf */,
+				7F638A022752C55000D48F69 /* Poppins-ExtraBold.ttf */,
+				7F638A032752C55000D48F69 /* Poppins-BlackItalic.ttf */,
+				7F638A042752C55000D48F69 /* OFL.txt */,
+				7F638A052752C55000D48F69 /* Poppins-Regular.ttf */,
+				7F638A062752C55000D48F69 /* Poppins-LightItalic.ttf */,
+				7F638A072752C55000D48F69 /* Poppins-Bold.ttf */,
+				7F638A082752C55000D48F69 /* Poppins-Black.ttf */,
+				7F638A092752C55000D48F69 /* Poppins-Thin.ttf */,
+				7F638A0A2752C55000D48F69 /* Poppins-SemiBold.ttf */,
+				7F638A0B2752C55000D48F69 /* Poppins-Italic.ttf */,
+				7F638A0C2752C55000D48F69 /* Poppins-MediumItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F6389A02752C39F00D48F69 /* Jeevan-Rekha */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6389CE2752C3A200D48F69 /* Build configuration list for PBXNativeTarget "Jeevan-Rekha" */;
+			buildPhases = (
+				7F63899D2752C39F00D48F69 /* Sources */,
+				7F63899E2752C39F00D48F69 /* Frameworks */,
+				7F63899F2752C39F00D48F69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Jeevan-Rekha";
+			packageProductDependencies = (
+				7F774DCD2758E45C00999386 /* FirebaseAnalytics */,
+				7F774DCF2758E45C00999386 /* FirebaseAnalyticsSwift-Beta */,
+				7F774DD12758E45C00999386 /* FirebaseAuth */,
+				7F774DD32758E45C00999386 /* FirebaseDatabase */,
+				7F774DD52758E45C00999386 /* FirebaseFirestore */,
+				7F774DD72758E45C00999386 /* FirebaseInAppMessaging-Beta */,
+				7F774DD92758E45C00999386 /* FirebaseMessaging */,
+			);
+			productName = "Jeevan-Rekha";
+			productReference = 7F6389A12752C39F00D48F69 /* Jeevan-Rekha.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F6389B92752C3A200D48F69 /* Jeevan-RekhaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6389D12752C3A200D48F69 /* Build configuration list for PBXNativeTarget "Jeevan-RekhaTests" */;
+			buildPhases = (
+				7F6389B62752C3A200D48F69 /* Sources */,
+				7F6389B72752C3A200D48F69 /* Frameworks */,
+				7F6389B82752C3A200D48F69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F6389BC2752C3A200D48F69 /* PBXTargetDependency */,
+			);
+			name = "Jeevan-RekhaTests";
+			productName = "Jeevan-RekhaTests";
+			productReference = 7F6389BA2752C3A200D48F69 /* Jeevan-RekhaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7F6389C32752C3A200D48F69 /* Jeevan-RekhaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6389D42752C3A200D48F69 /* Build configuration list for PBXNativeTarget "Jeevan-RekhaUITests" */;
+			buildPhases = (
+				7F6389C02752C3A200D48F69 /* Sources */,
+				7F6389C12752C3A200D48F69 /* Frameworks */,
+				7F6389C22752C3A200D48F69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F6389C62752C3A200D48F69 /* PBXTargetDependency */,
+			);
+			name = "Jeevan-RekhaUITests";
+			productName = "Jeevan-RekhaUITests";
+			productReference = 7F6389C42752C3A200D48F69 /* Jeevan-RekhaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F6389992752C39F00D48F69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					7F6389A02752C39F00D48F69 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					7F6389B92752C3A200D48F69 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 7F6389A02752C39F00D48F69;
+					};
+					7F6389C32752C3A200D48F69 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 7F6389A02752C39F00D48F69;
+					};
+				};
+			};
+			buildConfigurationList = 7F63899C2752C39F00D48F69 /* Build configuration list for PBXProject "Jeevan-Rekha" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F6389982752C39F00D48F69;
+			packageReferences = (
+				7F774DCC2758E45B00999386 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 7F6389A22752C39F00D48F69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F6389A02752C39F00D48F69 /* Jeevan-Rekha */,
+				7F6389B92752C3A200D48F69 /* Jeevan-RekhaTests */,
+				7F6389C32752C3A200D48F69 /* Jeevan-RekhaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F63899F2752C39F00D48F69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F638A1C2752C55000D48F69 /* Poppins-Thin.ttf in Resources */,
+				7F638A1F2752C55000D48F69 /* Poppins-MediumItalic.ttf in Resources */,
+				7F638A172752C55000D48F69 /* OFL.txt in Resources */,
+				7F638A0F2752C55000D48F69 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				7F638A162752C55000D48F69 /* Poppins-BlackItalic.ttf in Resources */,
+				7F638A0D2752C55000D48F69 /* Poppins-ExtraLight.ttf in Resources */,
+				7F638A1D2752C55000D48F69 /* Poppins-SemiBold.ttf in Resources */,
+				7F638A102752C55000D48F69 /* Poppins-BoldItalic.ttf in Resources */,
+				7F638A112752C55000D48F69 /* Poppins-Light.ttf in Resources */,
+				7F638A1B2752C55000D48F69 /* Poppins-Black.ttf in Resources */,
+				7F638A1E2752C55000D48F69 /* Poppins-Italic.ttf in Resources */,
+				7F638A152752C55000D48F69 /* Poppins-ExtraBold.ttf in Resources */,
+				7F638A192752C55000D48F69 /* Poppins-LightItalic.ttf in Resources */,
+				7F6389B42752C3A200D48F69 /* LaunchScreen.storyboard in Resources */,
+				7F638A132752C55000D48F69 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				7F638A182752C55000D48F69 /* Poppins-Regular.ttf in Resources */,
+				7F638A142752C55000D48F69 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				7F638A1A2752C55000D48F69 /* Poppins-Bold.ttf in Resources */,
+				7F638A0E2752C55000D48F69 /* Poppins-ThinItalic.ttf in Resources */,
+				7F61855A275F675A00E6D650 /* GoogleService-Info.plist in Resources */,
+				7F638A122752C55000D48F69 /* Poppins-Medium.ttf in Resources */,
+				7F6389B12752C3A200D48F69 /* Assets.xcassets in Resources */,
+				7F6389AC2752C39F00D48F69 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F6389B82752C3A200D48F69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F6389C22752C3A200D48F69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F63899D2752C39F00D48F69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F6389F42752C4ED00D48F69 /* SignInViewController.swift in Sources */,
+				7F6389EB2752C4ED00D48F69 /* ViewController.swift in Sources */,
+				7F6389ED2752C4ED00D48F69 /* PatientDetailViewController.swift in Sources */,
+				7F96A5AF275BDA3C00BC64F8 /* ProfileTableViewCell.swift in Sources */,
+				7F6389AF2752C39F00D48F69 /* Jeevan_Rekha.xcdatamodeld in Sources */,
+				7F6389F32752C4ED00D48F69 /* UserTypeTableViewCell.swift in Sources */,
+				7F6389F72752C54800D48F69 /* Switcher.swift in Sources */,
+				7F96A5B9275BDB0C00BC64F8 /* ECGTableViewCell.swift in Sources */,
+				7F96A5B5275BDAD600BC64F8 /* TempTableViewCell.swift in Sources */,
+				7F6389EC2752C4ED00D48F69 /* PatientViewController.swift in Sources */,
+				7F61855E275FA7BB00E6D650 /* CoverCell.swift in Sources */,
+				7F96A5B7275BDB0100BC64F8 /* PRTableViewCell.swift in Sources */,
+				7F96A5B3275BDACB00BC64F8 /* DripTableViewCell.swift in Sources */,
+				7F96A5AD275BC18700BC64F8 /* ProfileViewController.swift in Sources */,
+				7F618560275FA7D900E6D650 /* settingsCell.swift in Sources */,
+				7F6389F82752C54800D48F69 /* Constants.swift in Sources */,
+				7F6389A52752C39F00D48F69 /* AppDelegate.swift in Sources */,
+				7F638A222752C55D00D48F69 /* Extension.swift in Sources */,
+				7F6389A72752C39F00D48F69 /* SceneDelegate.swift in Sources */,
+				7F6389EF2752C4ED00D48F69 /* OnBoardingViewController.swift in Sources */,
+				7F6389DE2752C4DF00D48F69 /* Model.swift in Sources */,
+				7F6389F22752C4ED00D48F69 /* PatientTableViewCell.swift in Sources */,
+				7F6389F02752C4ED00D48F69 /* LogInViewController.swift in Sources */,
+				7F6389EE2752C4ED00D48F69 /* UserTypeViewController.swift in Sources */,
+				7F96A5B1275BDABE00BC64F8 /* DetailTableViewCell.swift in Sources */,
+				7F61855C275FA2B700E6D650 /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F6389B62752C3A200D48F69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F6389BF2752C3A200D48F69 /* Jeevan_RekhaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F6389C02752C3A200D48F69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F6389C92752C3A200D48F69 /* Jeevan_RekhaUITests.swift in Sources */,
+				7F6389CB2752C3A200D48F69 /* Jeevan_RekhaUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F6389BC2752C3A200D48F69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F6389A02752C39F00D48F69 /* Jeevan-Rekha */;
+			targetProxy = 7F6389BB2752C3A200D48F69 /* PBXContainerItemProxy */;
+		};
+		7F6389C62752C3A200D48F69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F6389A02752C39F00D48F69 /* Jeevan-Rekha */;
+			targetProxy = 7F6389C52752C3A200D48F69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7F6389AA2752C39F00D48F69 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F6389AB2752C39F00D48F69 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7F6389B22752C3A200D48F69 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F6389B32752C3A200D48F69 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F6389CC2752C3A200D48F69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F6389CD2752C3A200D48F69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F6389CF2752C3A200D48F69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Jeevan-Rekha/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "umesh.Jeevan-Rekha";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F6389D02752C3A200D48F69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Jeevan-Rekha/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "umesh.Jeevan-Rekha";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7F6389D22752C3A200D48F69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "umesh.Jeevan-RekhaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jeevan-Rekha.app/Jeevan-Rekha";
+			};
+			name = Debug;
+		};
+		7F6389D32752C3A200D48F69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "umesh.Jeevan-RekhaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jeevan-Rekha.app/Jeevan-Rekha";
+			};
+			name = Release;
+		};
+		7F6389D52752C3A200D48F69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "umesh.Jeevan-RekhaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Jeevan-Rekha";
+			};
+			name = Debug;
+		};
+		7F6389D62752C3A200D48F69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "umesh.Jeevan-RekhaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Jeevan-Rekha";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F63899C2752C39F00D48F69 /* Build configuration list for PBXProject "Jeevan-Rekha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6389CC2752C3A200D48F69 /* Debug */,
+				7F6389CD2752C3A200D48F69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F6389CE2752C3A200D48F69 /* Build configuration list for PBXNativeTarget "Jeevan-Rekha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6389CF2752C3A200D48F69 /* Debug */,
+				7F6389D02752C3A200D48F69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F6389D12752C3A200D48F69 /* Build configuration list for PBXNativeTarget "Jeevan-RekhaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6389D22752C3A200D48F69 /* Debug */,
+				7F6389D32752C3A200D48F69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F6389D42752C3A200D48F69 /* Build configuration list for PBXNativeTarget "Jeevan-RekhaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6389D52752C3A200D48F69 /* Debug */,
+				7F6389D62752C3A200D48F69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7F774DCC2758E45B00999386 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7F774DCD2758E45C00999386 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F774DCC2758E45B00999386 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		7F774DCF2758E45C00999386 /* FirebaseAnalyticsSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F774DCC2758E45B00999386 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAnalyticsSwift-Beta";
+		};
+		7F774DD12758E45C00999386 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F774DCC2758E45B00999386 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		7F774DD32758E45C00999386 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F774DCC2758E45B00999386 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		7F774DD52758E45C00999386 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F774DCC2758E45B00999386 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		7F774DD72758E45C00999386 /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F774DCC2758E45B00999386 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		7F774DD92758E45C00999386 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F774DCC2758E45B00999386 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		7F6389AD2752C39F00D48F69 /* Jeevan_Rekha.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7F6389AE2752C39F00D48F69 /* Jeevan_Rekha.xcdatamodel */,
+			);
+			currentVersion = 7F6389AE2752C39F00D48F69 /* Jeevan_Rekha.xcdatamodel */;
+			path = Jeevan_Rekha.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7F6389992752C39F00D48F69 /* Project object */;
+}
