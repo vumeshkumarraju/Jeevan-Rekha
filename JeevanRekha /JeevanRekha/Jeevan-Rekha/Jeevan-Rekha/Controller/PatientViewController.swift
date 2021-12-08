@@ -6,18 +6,20 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class PatientViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate{
-    
 
 
     @IBOutlet var PatientTableView: UITableView!
+   
+    var sensor5: DatabaseReference!
     
     let searchController = UISearchController(searchResultsController: nil)
     var searchActive : Bool = false
     
-    var patients : [patient] = [patient(name: "Abhisek Singh", pID: "ACT001", disease: "CoVID", status: pStatus.crtical, age: 52),patient(name: "Sohaib Mathur", pID: "BCT105", disease: "Hepatitis", status: pStatus.fine, age: 55)]
-    
+//    var patients : [patient] = [patient(name: "Abhisek Singh", pID: "ACT001", disease: "CoVID", status: pStatus.crtical, age: 52),patient(name: "Sohaib Mathur", pID: "BCT105", disease: "Hepatitis", status: pStatus.fine, age: 55)]
+    var patients : [patient] = [patient(name: "Abhisek Singh", pID: "ACT001", disease: "CoVID", status: pStatus.crtical, age: 52)]
     var filteredPatient : [patient] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,7 @@ class PatientViewController: UIViewController,UITableViewDelegate,UITableViewDat
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = " Search "
         navigationItem.searchController = searchController
-        
+        sensor5 = Database.database().reference(withPath: "/sensor5")
         // Do any additional setup after loading the view.
     }
     
@@ -52,14 +54,29 @@ class PatientViewController: UIViewController,UITableViewDelegate,UITableViewDat
             cell.PatientName.text = filteredPatient[indexPath.row].name
             cell.PatientImage.image = UIImage(named: filteredPatient[indexPath.row].name)
             cell.Suffering.text = "Suffering : \(filteredPatient[indexPath.row].disease)"
-            switch filteredPatient[indexPath.row].status{
-            case .crtical:
-                cell.condition.tintColor = UIColor(named: "Lev1")
-            case .moderate:
-                cell.condition.tintColor = UIColor(named: "Lev2")
-            case .fine:
-                cell.condition.tintColor = UIColor(named: "Lev3")
+            self.sensor5.observe(.value){ (snapshot) in
+                if let value = snapshot.value as? Int{
+//                    print(value)
+                    if value < 99{
+                        self.filteredPatient[indexPath.row].status = pStatus.fine
+                    }
+                    else if (value >= 99 && value <= 100){
+                        self.filteredPatient[indexPath.row].status = pStatus.moderate
+                    }
+                    else{
+                        self.filteredPatient[indexPath.row].status = pStatus.crtical
+                    }
+                    switch self.filteredPatient[indexPath.row].status{
+                    case .crtical:
+                        cell.condition.tintColor = UIColor(named: "Lev1")
+                    case .moderate:
+                        cell.condition.tintColor = UIColor(named: "Lev2")
+                    case .fine:
+                        cell.condition.tintColor = UIColor(named: "Lev3")
+                    }
+                }
             }
+            
 
         }
         else{
@@ -67,13 +84,27 @@ class PatientViewController: UIViewController,UITableViewDelegate,UITableViewDat
             cell.PatientName.text = patients[indexPath.row].name
             cell.PatientImage.image = UIImage(named: patients[indexPath.row].name)
             cell.Suffering.text = "Suffering : \(patients[indexPath.row].disease)"
-            switch patients[indexPath.row].status{
-            case .crtical:
-                cell.condition.tintColor = UIColor(named: "Lev1")
-            case .moderate:
-                cell.condition.tintColor = UIColor(named: "Lev2")
-            case .fine:
-                cell.condition.tintColor = UIColor(named: "Lev3")
+            self.sensor5.observe(.value){ (snapshot) in
+                if let value = snapshot.value as? Int{
+//                    print(value)
+                    if value < 99{
+                        self.patients[indexPath.row].status = pStatus.fine
+                    }
+                    else if (value >= 99 && value <= 100){
+                        self.patients[indexPath.row].status = pStatus.moderate
+                    }
+                    else{
+                        self.patients[indexPath.row].status = pStatus.crtical
+                    }
+                    switch self.patients[indexPath.row].status{
+                    case .crtical:
+                        cell.condition.tintColor = UIColor(named: "Lev1")
+                    case .moderate:
+                        cell.condition.tintColor = UIColor(named: "Lev2")
+                    case .fine:
+                        cell.condition.tintColor = UIColor(named: "Lev3")
+                    }
+                }
             }
         }
         return cell

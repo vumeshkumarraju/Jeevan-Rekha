@@ -15,6 +15,7 @@ class LogInViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var PasswordTextField: UITextField!
     @IBOutlet var ForgetPassButton: UIButton!
+    var x : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 8
@@ -25,6 +26,7 @@ class LogInViewController: UIViewController {
         loginButton.clipsToBounds = true
         emailTextField.setLeftPadding()
         PasswordTextField.setLeftPadding()
+        show()
     }
     
     var users = [user]()
@@ -59,16 +61,18 @@ class LogInViewController: UIViewController {
                 if error != nil{
                     self.showPopUp(title: "", message: error!.localizedDescription)
                 }
-                self.getData(checkID: result!.user.uid)
-            }
-            switcher.rootViewCOntrollerChanged()
-            if self.presentingViewController != nil {
-                self.dismiss(animated: false, completion: {
-                   self.navigationController!.popToRootViewController(animated: true)
-                })
-            }
-            else {
-                self.navigationController!.popToRootViewController(animated: true)
+                else{
+                    self.getData(checkID: result!.user.uid)
+                    switcher.rootViewCOntrollerChanged()
+                    if self.presentingViewController != nil {
+                        self.dismiss(animated: false, completion: {
+                           self.navigationController!.popToRootViewController(animated: true)
+                        })
+                    }
+                    else {
+                        self.navigationController!.popToRootViewController(animated: true)
+                    }
+                }
             }
         }
             
@@ -95,6 +99,12 @@ class LogInViewController: UIViewController {
                 }
                 
             }
+        }
+    }
+    func show(){
+        if self.x == 1{
+        self.showPopUp(title: "Email Verification", message: "Your credentials will be verified and will be linked with your ID.")
+            self.x = 0
         }
     }
 }

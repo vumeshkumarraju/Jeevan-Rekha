@@ -6,15 +6,29 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class PatientDetailViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet var patientTableView: UITableView!
     
-    var Patient = patient(name: "", pID: "", disease: "", status: pStatus.fine, age: 40)
     
+    
+    var Patient = patient(name: "", pID: "", disease: "", status: pStatus.fine, age: 40)
+    var dripValue : String = ""
+    var sensor1: DatabaseReference!
+    var sensor2: DatabaseReference!
+    var sensor3: DatabaseReference!
+    var sensor4: DatabaseReference!
+    var sensor5: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sensor1 = Database.database().reference(withPath: "/sensor1")
+        sensor2 = Database.database().reference(withPath: "/sensor2")
+        sensor3 = Database.database().reference(withPath: "/sensor3")
+        sensor4 = Database.database().reference(withPath: "/sensor4")
+        sensor5 = Database.database().reference(withPath: "/sensor5")
         
         patientTableView.dataSource = self
         patientTableView.delegate = self
@@ -34,7 +48,22 @@ class PatientDetailViewController: UIViewController,UITableViewDelegate,UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
             let cell = patientTableView.dequeueReusableCell(withIdentifier: "profile") as! ProfileTableViewCell
-            cell.storePatient(model: self.Patient)
+            
+            self.sensor5.observe(.value){ (snapshot) in
+                if let value = snapshot.value as? Int{
+//                    print(value)
+                    if value < 99{
+                        self.Patient.status = pStatus.fine
+                    }
+                    else if (value >= 99 && value <= 100){
+                        self.Patient.status = pStatus.moderate
+                    }
+                    else{
+                        self.Patient.status = pStatus.crtical
+                    }
+                    cell.storePatient(model: self.Patient)
+                }
+            }
             return cell
         }
         else if indexPath.row == 1{
@@ -43,14 +72,51 @@ class PatientDetailViewController: UIViewController,UITableViewDelegate,UITableV
         }
         else if indexPath.row == 2{
             let cell = patientTableView.dequeueReusableCell(withIdentifier: "Drip Level") as! DripTableViewCell
+            self.sensor1.observe(.value){ (snapshot) in
+                if let value = snapshot.value as? Int{
+//                    print(value)
+                    self.dripValue = "\(Float(value)/10)%"
+                    cell.DripLevel.text = self.dripValue
+                }
+            }
+            self.sensor2.observe(.value){ (snapshot) in
+                if let value = snapshot.value as? Int{
+//                    print(value)
+                    if value == 1{
+                        cell.BubbleFormed.text = "YES"
+                    }
+                    else{
+                        cell.BubbleFormed.text = "NO"
+                    }
+                }
+            }
             return cell
         }
         else if indexPath.row == 3{
             let cell = patientTableView.dequeueReusableCell(withIdentifier: "Pulse Rate") as! PRTableViewCell
+            self.sensor3.observe(.value){ (snapshot) in
+                if let value = snapshot.value as? Int{
+//                    print(value)
+                    cell.O2Level.text = "\(value)%"
+                }
+            }
+            self.sensor4.observe(.value){ (snapshot) in
+                if let value = snapshot.value as? Int{
+//                    print(value)
+                    cell.PulseRate.text = "\(value)"
+                }
+            }
             return cell
         }
         else if indexPath.row == 4{
             let cell = patientTableView.dequeueReusableCell(withIdentifier: "Temp") as! TempTableViewCell
+            self.sensor5.observe(.value){ (snapshot) in
+                if let value = snapshot.value as? Int{
+//                    print(value)
+                    cell.Tempincel.text = "\((value-32)*5/9) C"
+                    cell.TempInF.text = "\(value) F"
+                }
+            }
             return cell
         }
         else{
@@ -78,5 +144,5 @@ class PatientDetailViewController: UIViewController,UITableViewDelegate,UITableV
             return 138
         }
     }
-
+    
 }

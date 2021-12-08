@@ -72,6 +72,7 @@ class UserTypeViewController: UIViewController,UIPickerViewDelegate,UIPickerView
                 }
                 self.remove()
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LogInViewController") as! LogInViewController
+                vc.x = 1
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }

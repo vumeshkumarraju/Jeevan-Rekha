@@ -10,6 +10,8 @@ import UIKit
 class TempTableViewCell: UITableViewCell {
 
     @IBOutlet var View: UIView!
+    @IBOutlet var Tempincel: UILabel!
+    @IBOutlet var TempInF: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         self.View.layer.cornerRadius = 10
